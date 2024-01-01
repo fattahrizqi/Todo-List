@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #dcdcff, #bdc0e9, #9ea4d4, #7f89bf, #5f70ab, #5267a8, #435ea5, #3256a2, #365ab0, #3c5ebd, #4362cb, #4b66d8);
+  padding: 3rem 1rem;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 1rem;
+  max-width: 350px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
+}
+.todo-input input {
+  all: unset;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid rgb(122, 122, 122);
+}
+.todo-input button {
+  all: unset;
+  width: 50px;
+  aspect-ratio: 1/1;
+  font-size: 32px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid rgb(122, 122, 122);
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.todo-input button:hover {
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.wrapper-list {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-list .list {
+  padding: 0 0 1rem 2rem;
+  position: relative;
+}
+.wrapper-list .list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(img/unchecked.png);
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.wrapper-list .list.complete {
+  text-decoration: line-through;
+}
+.wrapper-list .list.complete::before {
+  background-image: url(img/checked.png);
+}
+
+.wrapper-list .list span {
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  aspect-ratio: 1/1;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.wrapper-list .list span:hover {
+  background-color: rgb(219, 219, 219);
+}
